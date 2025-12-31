@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activate Your 2-Year Warranty | Designer iWear</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --brand-red: #E63946;
+            --brand-red-dark: #C62E38;
+            --brand-black: #000000;
+            --dark-gray: #1A1A1A;
+            --mid-gray: #2D2D2D;
+            --light-gray: #F5F5F5;
+            --text-light: #FFFFFF;
+            --text-muted: #999999;
+            --success: #28A745;
+        }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--light-gray);
+            color: var(--brand-black);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header with Logo */
+        .top-header {
+            background: var(--brand-black);
+            padding: 20px 0;
+            border-bottom: 3px solid var(--brand-red);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--text-light);
+            letter-spacing: -0.5px;
+        }
+
+        .shop-now-btn {
+            background: var(--brand-red);
+            color: white;
+            padding: 12px 28px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .shop-now-btn:hover {
+            background: var(--brand-red-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(230, 57, 70, 0.3);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--brand-black) 0%, var(--dark-gray) 100%);
+            color: var(--text-light);
+            padding: 60px 24px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                repeating-linear-gradient(90deg, transparent, transparent 50px, rgba(230, 57, 70, 0.03) 50px, rgba(230, 57, 70, 0.03) 51px);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .warranty-badge {
+            display: inline-block;
+            background: var(--brand-red);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        .hero-title {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            line-height: 1.2;
+            letter-spacing: -1px;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            color: var(--text-muted);
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 600px;
+            margin: -40px auto 80px;
+            padding: 0 24px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Form Card */
+        .form-card {
+            background: white;
+            border-radius: 12px;
+            padding: 48px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            border-top: 4px solid var(--brand-red);
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 36px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #E0E0E0;
+        }
+
+        .form-header h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--brand-black);
+        }
+
+        .form-header p {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--brand-black);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .input-wrapper {
+            position: relative;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 14px 16px;
+            background: var(--light-gray);
+            border: 2px solid transparent;
+            border-radius: 8px;
+            font-size: 15px;
+            color: var(--brand-black);
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus {
+            outline: none;
+            border-color: var(--brand-red);
+            background: white;
+        }
+
+        input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .help-link {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--brand-red);
+            color: white;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .help-link:hover {
+            background: var(--brand-red-dark);
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: var(--brand-red);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-top: 12px;
+        }
+
+        .submit-btn:hover:not(:disabled) {
+            background: var(--brand-red-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(230, 57, 70, 0.3);
+        }
+
+        .submit-btn:active:not(:disabled) {
+            transform: translateY(0);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        /* Trust Indicators */
+        .trust-section {
+            margin-top: 40px;
+            padding-top: 32px;
+            border-top: 1px solid #E0E0E0;
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            text-align: center;
+        }
+
+        .trust-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .trust-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--light-gray);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+
+        .trust-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--brand-black);
+        }
+
+        .trust-text {
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal.active {
+            display: flex;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 12px;
+            max-width: 600px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            animation: slideUp 0.3s ease-out;
+        }
+
+        .modal-header {
+            padding: 32px 32px 24px;
+            border-bottom: 1px solid #E0E0E0;
+            background: var(--light-gray);
+        }
+
+        .modal-header h2 {
+            font-size: 24px;
+            margin-bottom: 8px;
+            color: var(--brand-black);
+            font-weight: 700;
+        }
+
+        .modal-header p {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: white;
+            border: none;
+            color: var(--brand-black);
+            font-size: 28px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .close-modal:hover {
+            background: var(--light-gray);
+            transform: rotate(90deg);
+        }
+
+        .modal-body {
+            padding: 32px;
+        }
+
+        .help-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        .help-step {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            flex-shrink: 0;
+            width: 36px;
+            height: 36px;
+            background: var(--brand-red);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 16px;
+            color: white;
+        }
+
+        .step-content h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: var(--brand-black);
+            font-weight: 600;
+        }
+
+        .step-content p {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .example-image {
+            margin-top: 16px;
+            background: var(--light-gray);
+            border-radius: 8px;
+            padding: 20px;
+            border: 1px solid #E0E0E0;
+        }
+
+        .example-order-id {
+            font-family: 'Courier New', monospace;
+            font-size: 16px;
+            color: var(--brand-red);
+            background: white;
+            padding: 12px 16px;
+            border-radius: 6px;
+            display: inline-block;
+            font-weight: 700;
+            letter-spacing: 1px;
+            border: 2px dashed var(--brand-red);
+        }
+
+        /* Success State */
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 48px 24px;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .success-message.active {
+            display: block;
+        }
+
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--success);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 40px;
+            animation: scaleIn 0.5s ease-out;
+        }
+
+        .success-message h2 {
+            font-size: 28px;
+            margin-bottom: 12px;
+            color: var(--brand-black);
+            font-weight: 700;
+        }
+
+        .success-message p {
+            font-size: 16px;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+        }
+
+        .success-details {
+            background: var(--light-gray);
+            border-radius: 8px;
+            padding: 24px;
+            margin-top: 24px;
+            border: 1px solid #E0E0E0;
+            text-align: left;
+        }
+
+        .success-details p {
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: var(--brand-black);
+        }
+
+        .success-details strong {
+            color: var(--brand-red);
+        }
+
+        /* Error State */
+        .error-message {
+            display: none;
+            background: #FFF0F0;
+            border: 1px solid var(--brand-red);
+            color: var(--brand-red-dark);
+            padding: 16px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .error-message.active {
+            display: block;
+            animation: shake 0.4s ease-out;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--brand-black);
+            color: var(--text-muted);
+            text-align: center;
+            padding: 40px 24px;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo .logo-icon {
+            width: 32px;
+            height: 32px;
+        }
+
+        .footer-logo .logo-text {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-light);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--brand-red);
+        }
+
+        .footer-contact {
+            font-size: 13px;
+            margin-bottom: 16px;
+        }
+
+        .footer-contact a {
+            color: var(--brand-red);
+            text-decoration: none;
+        }
+
+        .footer-copyright {
+            font-size: 12px;
+            padding-top: 20px;
+            border-top: 1px solid var(--mid-gray);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+        }
+
+        .loading-spinner {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 0.6s linear infinite;
+            margin-left: 8px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 36px;
+            }
+
+            .form-card {
+                padding: 32px 24px;
+            }
+
+            .trust-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .help-link {
+                position: static;
+                display: block;
+                margin-top: 8px;
+                width: fit-content;
+                transform: none;
+            }
+
+            .help-link:hover {
+                transform: scale(1.05);
+            }
+
+            .modal-header,
+            .modal-body {
+                padding: 24px;
+            }
+
+            .header-container {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="top-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <svg class="logo-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25 35C25 28.3726 30.3726 23 37 23H47C50.3137 23 53 25.6863 53 29V35C53 38.3137 50.3137 41 47 41H37C30.3726 41 25 35.6274 25 35Z" fill="#E63946"/>
+                    <path d="M53 35C53 28.3726 58.3726 23 65 23H75C78.3137 23 81 25.6863 81 29V35C81 38.3137 78.3137 41 75 41H65C58.3726 41 53 35.6274 53 35Z" fill="#E63946"/>
+                    <path d="M20 45H86C88.7614 45 91 47.2386 91 50V55C91 57.7614 88.7614 60 86 60H20C17.2386 60 15 57.7614 15 55V50C15 47.2386 17.2386 45 20 45Z" fill="#E63946"/>
+                    <circle cx="50" cy="70" r="8" fill="#E63946"/>
+                </svg>
+                <span class="logo-text">Designer iWear</span>
+            </div>
+            <a href="https://www.amazon.com/stores/page/2312599E-9621-4A0F-8FFF-0BFCFE52ABD5?ingress=0&visitId=8ca1a3cb-e949-4f86-917b-9ad294c1487e&ref_=as_li_ss_tl" class="shop-now-btn" target="_blank">
+                <span>Shop Now</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="warranty-badge">2-Year Warranty Included</div>
+            <h1 class="hero-title">Activate Your Warranty</h1>
+            <p class="hero-subtitle">Register your Designer iWear purchase in under 60 seconds and enjoy complete protection for 2 full years</p>
+        </div>
+    </section>
+
+    <!-- Main Form -->
+    <div class="container">
+        <div class="form-card" id="formCard">
+            <div class="form-header">
+                <h2>Warranty Registration</h2>
+                <p>Complete the form below to activate your coverage</p>
+            </div>
+
+            <div class="error-message" id="errorMessage"></div>
+            
+            <form id="warrantyForm">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="John" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Doe" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="orderId">Amazon Order ID</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="orderId" name="orderId" placeholder="123-4567890-1234567" required>
+                        <button type="button" class="help-link" id="helpBtn">Help</button>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    Activate Warranty
+                </button>
+            </form>
+
+            <div class="trust-section">
+                <div class="trust-grid">
+                    <div class="trust-item">
+                        <div class="trust-icon">🔒</div>
+                        <div class="trust-title">Secure</div>
+                        <div class="trust-text">Your data is protected</div>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">⚡</div>
+                        <div class="trust-title">Instant</div>
+                        <div class="trust-text">Immediate activation</div>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">✓</div>
+                        <div class="trust-title">Verified</div>
+                        <div class="trust-text">Email confirmation</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="success-message" id="successMessage">
+            <div class="success-icon">✓</div>
+            <h2>Warranty Activated!</h2>
+            <p>Your 2-year warranty is now active. Check your email for confirmation.</p>
+            
+            <div class="success-details">
+                <p><strong>Next Steps:</strong></p>
+                <p>• Confirmation email sent to your inbox</p>
+                <p>• Save your order details for warranty claims</p>
+                <p>• Contact us anytime at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="76190412130405361213051f111813045b1f011317045815191b">[email&#160;protected]</a></p>
+                <p>• Call 1.877.961.2010 for support</p>
+            </div>
+
+            <a href="https://www.amazon.com/stores/page/2312599E-9621-4A0F-8FFF-0BFCFE52ABD5?ingress=0&visitId=8ca1a3cb-e949-4f86-917b-9ad294c1487e&ref_=as_li_ss_tl" class="shop-now-btn" target="_blank" style="margin-top: 32px; display: inline-flex;">
+                Continue Shopping
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <!-- Help Modal -->
+    <div class="modal" id="helpModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal">×</button>
+            
+            <div class="modal-header">
+                <h2>Find Your Order ID</h2>
+                <p>Your Amazon Order ID can be found in these locations</p>
+            </div>
+            
+            <div class="modal-body">
+                <div class="help-steps">
+                    <div class="help-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Check Your Email</h3>
+                            <p>Look for your Amazon order confirmation email. The Order ID appears near the top.</p>
+                            <div class="example-image">
+                                <p style="font-size: 12px; margin-bottom: 8px; color: var(--text-muted);">Example format:</p>
+                                <div class="example-order-id">123-4567890-1234567</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="help-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Amazon Orders Page</h3>
+                            <p>Log into your Amazon account and navigate to "Returns & Orders". Your Order ID is listed next to each purchase.</p>
+                        </div>
+                    </div>
+
+                    <div class="help-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Product Packaging</h3>
+                            <p>Check your shipping label or packing slip inside the box. The Order ID is printed on both.</p>
+                        </div>
+                    </div>
+
+                    <div class="help-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Need More Help?</h3>
+                            <p>Contact us at <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="402f32242532330024253329272e25326d29372521326e232f2d">[email&#160;protected]</a></strong> or call <strong>1.877.961.2010</strong> and we'll assist with your warranty registration.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <svg class="logo-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25 35C25 28.3726 30.3726 23 37 23H47C50.3137 23 53 25.6863 53 29V35C53 38.3137 50.3137 41 47 41H37C30.3726 41 25 35.6274 25 35Z" fill="#E63946"/>
+                    <path d="M53 35C53 28.3726 58.3726 23 65 23H75C78.3137 23 81 25.6863 81 29V35C81 38.3137 78.3137 41 75 41H65C58.3726 41 53 35.6274 53 35Z" fill="#E63946"/>
+                    <path d="M20 45H86C88.7614 45 91 47.2386 91 50V55C91 57.7614 88.7614 60 86 60H20C17.2386 60 15 57.7614 15 55V50C15 47.2386 17.2386 45 20 45Z" fill="#E63946"/>
+                    <circle cx="50" cy="70" r="8" fill="#E63946"/>
+                </svg>
+                <span class="logo-text">Designer iWear</span>
+            </div>
+
+            <div class="footer-links">
+                <a href="https://www.amazon.com/stores/page/2312599E-9621-4A0F-8FFF-0BFCFE52ABD5?ingress=0&visitId=8ca1a3cb-e949-4f86-917b-9ad294c1487e&ref_=as_li_ss_tl" target="_blank">Shop</a>
+                <a href="/cdn-cgi/l/email-protection#f9968b9d9c8b8ab99d9c8a909e979c8bd4908e9c988bd79a9694">Contact</a>
+                <a href="tel:18779612010">1.877.961.2010</a>
+            </div>
+
+            <div class="footer-contact">
+                <p>Questions? Email us at <a href="/cdn-cgi/l/email-protection#3a55485e5f48497a5e5f49535d545f4817534d5f5b4814595557"><span class="__cf_email__" data-cfemail="c6a9b4a2a3b4b586a2a3b5afa1a8a3b4ebafb1a3a7b4e8a5a9ab">[email&#160;protected]</span></a></p>
+            </div>
+
+            <div class="footer-copyright">
+                <p>&copy; 2025 Designer iWear. All rights reserved. Authorized retailer of Ray-Ban and Oakley.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Modal functionality
+        const helpBtn = document.getElementById('helpBtn');
+        const helpModal = document.getElementById('helpModal');
+        const closeModal = document.getElementById('closeModal');
+
+        helpBtn.addEventListener('click', () => {
+            helpModal.classList.add('active');
+        });
+
+        closeModal.addEventListener('click', () => {
+            helpModal.classList.remove('active');
+        });
+
+        helpModal.addEventListener('click', (e) => {
+            if (e.target === helpModal) {
+                helpModal.classList.remove('active');
+            }
+        });
+
+        // Form submission
+        const form = document.getElementById('warrantyForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const formCard = document.getElementById('formCard');
+        const successMessage = document.getElementById('successMessage');
+        const errorMessage = document.getElementById('errorMessage');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            errorMessage.classList.remove('active');
+            errorMessage.textContent = '';
+            
+            const formData = {
+                firstName: document.getElementById('firstName').value.trim(),
+                lastName: document.getElementById('lastName').value.trim(),
+                email: document.getElementById('email').value.trim(),
+                orderId: document.getElementById('orderId').value.trim()
+            };
+
+            // Validate Order ID format
+            const orderIdPattern = /^\d{3}-\d{7}-\d{7}$/;
+            if (!orderIdPattern.test(formData.orderId)) {
+                errorMessage.textContent = 'Please enter a valid Amazon Order ID (format: 123-4567890-1234567)';
+                errorMessage.classList.add('active');
+                return;
+            }
+
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = 'Processing<span class="loading-spinner"></span>';
+
+            try {
+                // Replace with your actual API endpoint
+                const response = await fetch('/api/register-warranty', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                if (!response.ok) {
+                    throw new Error('Registration failed');
+                }
+
+                formCard.style.display = 'none';
+                successMessage.classList.add('active');
+
+            } catch (error) {
+                console.error('Error:', error);
+                errorMessage.textContent = 'Something went wrong. Please try again or contact support at orders@designer-iwear.com';
+                errorMessage.classList.add('active');
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Activate Warranty';
+            }
+        });
+
+    
