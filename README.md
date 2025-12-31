@@ -12,7 +12,7 @@ This folder contains EVERYTHING you need to deploy your warranty registration pa
 4. **vercel.json** - Configuration file for Vercel deployment
 5. **.env.example** - Template for your secret credentials (Mailchimp)
 
----
+--- 
 
 ## 🚀 Quick Start
 
